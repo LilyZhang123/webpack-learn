@@ -1,30 +1,56 @@
 require('./index.css');
+require('assert/close.less');
 import Vue from "vue";
-import axios from "axios"
-console.log(Vue)
-axios.defaults.withCredentials = true;
+import {fetch} from "components/utils";
 
-axios.post('/api/u/loading', {
-		firstName: 'Fred',
-		lastName: 'Flintstone'
-	})
-	.then(function(response) {
-		console.log(response);
-	})
-	.catch(function(error) {
-		console.log(error);
-	});
-
+fetch('/api/u/loading', {
+  methods: "post",
+  data: {
+    firstName: 'Fred',
+    lastName: 'Flintstone'
+  }
+}).then(function(response) {
+  console.log(response);
+}).catch(function(error) {
+  console.log(error);
+});
 var vm = new Vue({
-	el: "#app",
-	data: {
-		name: "用户名",
-		phone: " 18815294416"
-	},
-	methods: {
-		changeName: function() {
-			return this.name = "章力"
-			// console.log(this.name);
-		}
-	}
-})
+  el: "#app",
+  data: {
+    name: "用户名",
+    phone: " 18815294416",
+    show: false,
+    confirmText: {
+      title: "操作提示",
+
+    },
+    imgUrl:"http://localhost"
+  },
+  components: {
+  },
+  methods: {
+    changeName: function() {
+      return this.name = "章力"
+    },
+    onShow: function() {
+      this.show = true;
+      fetch('/dev/zjunicom-weixin/sw-api/login/oauth', {
+        method: "post",
+        data: {
+          code: '1111',
+          menuUrl: 'Flintstone'
+        }
+      }).then(function(response) {
+        console.log(response + 'response');
+      }).catch(function(error) {
+        console.log(error);
+      });
+    },
+    onConfirm: function() {
+      console.log("确认")
+    },
+    onCancel: function() {
+      console.log("取消")
+    }
+  }
+});
