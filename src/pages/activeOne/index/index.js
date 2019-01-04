@@ -1,7 +1,15 @@
 require('./index.css');
 require('assert/close.less');
+import 'mint-ui/lib/style.css'
 import Vue from "vue";
 import {fetch} from "components/utils";
+import Mint from 'mint-ui';
+import { MessageBox, Button } from 'mint-ui';
+Vue.component(Button.name, Button);
+Vue.use(Mint);
+
+
+
 
 fetch('/api/u/loading', {
   methods: "post",
@@ -32,6 +40,13 @@ var vm = new Vue({
     changeName: function() {
       return this.name = "章力"
     },
+    open() {
+        MessageBox({
+  title: '提示',
+  message: '确定执行此操作?',
+  showCancelButton: true
+});
+      },
     onShow: function() {
       this.show = true;
       fetch('/dev/zjunicom-weixin/sw-api/login/oauth', {

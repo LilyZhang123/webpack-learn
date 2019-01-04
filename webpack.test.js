@@ -1,20 +1,19 @@
 const webpack = require('webpack');
 const path = require('path');
 var glob = require("glob")
-const vuxLoader = require('vux-loader');
 
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 var htmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
-var htmlMiniConfig =  {
+var htmlMiniConfig = {
 	collapseWhitespace: true,
 	removeComments: true
 };
 
 var webpackconfig = {
-	mode:'none',
+	mode: 'none',
 	entry: addEntry,
 	output: {
 		path: path.resolve(__dirname, 'dist'),
@@ -49,12 +48,11 @@ var webpackconfig = {
 			}]
 		}, {
 			test: /\.(htm|html)$/i,
-			use:[{
-				loader:'html-withimg-loader'
-			},
-			{
-				loader:"html-loader"
-			}] 
+			use: [{
+				loader: 'html-withimg-loader'
+			}, {
+				loader: "html-loader"
+			}]
 		}, {
 			test: /.(png|jpg|jpeg|svg|gif)$/,
 			use: [{
@@ -109,6 +107,9 @@ var webpackconfig = {
 		}, {
 			test: /\.exec\.js$/,
 			use: ['script-loader']
+		}, {
+			test: /\.(eot|svg|ttf|woff|woff2)$/,
+			loader: 'file-loader'
 		}]
 	},
 	resolve: {
@@ -135,11 +136,11 @@ var webpackconfig = {
 		// new VueLoaderPlugin(),
 		new CleanWebpackPlugin('dist'),
 		new MiniCssExtractPlugin({
-			filename:  '[name].css' ,
-			chunkFilename:  '[id].css'
+			filename: '[name].css',
+			chunkFilename: '[id].css'
 		}),
 		new OptimizeCSSAssetsPlugin({}),
-	
+
 	]
 }
 
@@ -169,7 +170,7 @@ function addEntry() {
 getEntry().forEach(pathname => {
 	let conf = {
 		filename: path.join(pathname) + '/index.html',
-		template: 'html-withimg-loader!'+ path.join(__dirname, pathname, 'index.html'),
+		template: 'html-withimg-loader!' + path.join(__dirname, pathname, 'index.html'),
 		minify: htmlMiniConfig,
 		chunks: [pathname],
 	}

@@ -2,7 +2,7 @@
   "name": "webpack-learn",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "webpack --config webpack.test.js",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.dev.js --open --port 3000 --devtool eval --progress --colors --hot  ",
@@ -22,6 +22,7 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
+    "babel-plugin-component": "^1.1.1",
     "babel-preset-env": "^1.7.0",
     "clean-webpack-plugin": "^1.0.0",
     "cross-env": "^5.2.0",
@@ -43,14 +44,13 @@
     "vue-html-loader": "^1.2.4",
     "vue-loader": "^14.2.2",
     "vue-template-compiler": "^2.5.21",
-    "vux-loader": "^1.2.9",
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
     "jquery": "^3.3.1",
-    "vue": "^2.5.21",
-    "vux": "^2.9.2"
+    "mint-ui": "^2.2.13",
+    "vue": "^2.5.21"
   }
 }

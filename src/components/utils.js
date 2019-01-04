@@ -1,20 +1,25 @@
 import axios from 'axios'
 var qs = require('qs');
 import Vue from "vue";
+import { Indicator } from 'mint-ui';
 
 
 axios.interceptors.request.use(config => {
- 
+  Indicator.open({
+  text: 'Loading...',
+  spinnerType: 'fading-circle'
+});
   return config
 }, error => {
   setTimeout(() => {
-
+Indicator.close();
   }, 3000)
   return Promise.reject(error)
 });
 
 // http响应拦截器
 axios.interceptors.response.use(data => { // 响应成功关闭loading
+  Indicator.close();
   return data
 }, error => {
   return Promise.reject(error)

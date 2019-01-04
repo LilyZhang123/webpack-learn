@@ -1,4 +1,4 @@
-{
+ {
   "presets": [
     ["env", {
       "targets": {
@@ -7,5 +7,14 @@
       "include": ["transform-es2015-arrow-functions", "es6.map"],
       "exclude": ["transform-regenerator", "es6.set"]
     }]
+  ],
+  "plugins": [
+    [
+      "component",
+      {
+        "libraryName": "mint-ui",
+        "style":true
+      }
+    ]
   ]
 }

@@ -1,7 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
 var glob = require("glob")
-const vuxLoader = require('vux-loader');
 
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 var htmlWebpackPlugin = require('html-webpack-plugin');
@@ -109,6 +108,9 @@ var webpackconfig = {
 		}, {
 			test: /\.exec\.js$/,
 			use: ['script-loader']
+		}, {
+			test: /\.(eot|svg|ttf|woff|woff2)$/,
+			loader: 'file-loader'
 		}]
 	},
 	resolve: {
