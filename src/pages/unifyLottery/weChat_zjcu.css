@@ -1,0 +1,151 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0}
+body{font-size:12px;font-family:Microsoft Yahei,Helvetica,黑体,Verdana,Arial,sans-serif;color:#555}
+textarea{resize:none}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%}
+ol,ul,li{list-style:none}
+img{border:none;display:block}
+*{outline:none}
+input,button{border:0;font-family:Microsoft Yahei}
+button{cursor:pointer}
+th{font-weight:normal}
+p{margin:0}
+button{border:none}
+img{border:none;outline:none}
+i{font-style:normal}
+label{margin:0 10px 0 0}
+label input{position:relative;top:1px}
+a{text-decoration:none;color: inherit;}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{height:1%}
+.wrap{width: 100%;min-width: 320px;max-width: 640px;margin: 0 auto;position: relative;}
+.form-control{border:1px solid #ddd;display:block;width:100%;height:40px;padding:4px 12px;font-size:14px;line-height:40px;color:#555;background-color:#fff;background-image:none;-webkit-border-radius:20px;border-radius:20px;-webkit-box-shadow:0 5px 15px rgba(255,140,42,.2);box-shadow:0 5px 15px rgba(255,140,42,.2);}
+input.form-control{border:0;background: none;border-radius: 0;box-shadow: none;}
+.btn{font-size:14px;display:block;width:100%;height:40px;line-height:40px;background-color:#fc6129;color:#fff;text-align:center;border-radius:20px;-webkit-border-radius:20px}
+header,footer{overflow:hidden;position:relative}
+.form-input{position:relative;border-top: 1px solid #ddd;border-bottom: 1px solid #ddd;padding: 0;background-color: #fff;margin: 10px 0;}
+.lottery_date{color:#ff5a11;position:absolute;width: 30%;left: 35%;top: 35%;text-align: center;}
+.form_login input{padding-left: 40px;}
+.form_check{padding-left: 100px;border-top: 0;}
+.form_login_new,.form_check{margin: 0;}
+.form_login.form_check input{padding-left: 0;}
+.form_login:before{content:'';display:inline-block;width:20px;height:20px;background:url(../../../images/unifyLottery/login.png) no-repeat;background-size: 20px 60px;left: 10px;top: 10px;position: absolute;}
+.form_login_new:before{background-position: 0 -20px;}
+.form_check:before{background-position: 0 -40px;}
+.form_login_old>span{position: absolute;left: 40px;line-height: 39px;font-size: 14px;}
+.form_login_old input{padding-left: 95px;}
+#securityGain,#checkCode{border-radius: 0;position: absolute;top: 0;}
+#securityGain{width: 100px;right: 0;}
+#checkCode{left: 40px;width: 60px;line-height: 40px;font-size: 14px;}
+#checkCode:after{content: '-';position: absolute;left: 50px;}
+.btn.disabled{background-color: #999;}
+.curNumber{color: #ff5a11;font-size: 20px;text-align: center;margin: 10px 0;}
+.reLogin{color: #ff5a11;float: right;}
+.lottery{position: absolute;top: 42%;width: 100%;}
+.wheel{position: relative;width: 90%;left: 5%;/*转盘的背景*/background-image: url(../../../images/unifyLottery/wheelBg.png);background-size: 100% 100%;}
+.wheel canvas.item{width: 100%;display: block;}
+.wheel img.pointer{position: absolute;width: 31.5%;left: 34.7%;top: 30.5%;}
+.rewardText{color: #ff5a11;position: relative;top: 50%;transform:translateY(-50%);-webkit-transform:translateY(-50%);text-align: center;font-size: 18px;font-weight: bold;line-height: 30px;}
+.rewardTextC{position: absolute;top: 32%;width: 80%;height: 33%;left: 10%;}
+
+.pointTotal{position: absolute;color: #ff5a11;top: 20%;left: 45%;font-size: 24px;height: 6%;}
+.pointToday{position: absolute;color: #ff5a11;top: 32%;left: 31%;width: 38%;font-size: 18px;height: 7%;}
+.pointToday>span{text-align: center;}
+.flex>span,.flex>b{position: absolute;top: 50%;transform:translateY(-50%);-webkit-transform:translateY(-50%);width: 100%;}
+.btn_sign{width:18%;color: #ff5a11;border: 1px solid #ff5a11;text-align: center;padding: 2px 0;position: absolute;right: 5%;top: 28%;background-color: rgba(255,255,255,.2);border-radius:5px;-webkit-border-radius:5px;}
+.btn_virtual{position: absolute;text-indent: -9999px;}
+.signCenter .btn_virtual{width: 23%;top: 59%;height: 9%;}
+.scrollInfo{position: absolute;color: #ff5a11;border: 1px solid #ff5a11;border-radius:5px;-webkit-border-radius:5px;width: 64%;top: 78%;height: 14%;left: 23%;}
+.scrollInfo>marquee{position: absolute;height: 100%;width: 100%;left: 0;top: 0;padding: 5px;}
+.pointItemsTitle{padding: 5px 10px; font-size: 14px;border-left: 5px solid #ff5a11;border-bottom:1px solid #ddd;border-top:1px solid #ddd;}
+.pointItemsList>li{min-height: 68px;line-height: 24px;position: relative;padding: 10px 80px;}
+.pointItemsList>li>img{position: absolute;left: 10px;top: 50%;transform:translateY(-50%);-webkit-transform:translateY(-50%);}
+.pointItemsList>li+li{border-top: 1px dashed #ddd;}
+.itemName{font-weight: bold;}
+.itemPrice{color: #ff5a11;}
+.itemPrice>i{display: inline-block;width: 16px;height: 16px;line-height:16px;margin-right:5px;text-align: center;border: 1px solid #ff5a11;border-radius:10px;-webkit-border-radius:10px;}
+.itemBtn{position: absolute;right: 10px;width: 60px;top: 50%;transform:translateY(-50%);-webkit-transform:translateY(-50%);background-color: #ff5a11;color: #fff;text-align: center;border-radius: 12px;-webkit-border-radius: 12px;}
+.itemNone{position: absolute;right: 15px;top: 50%;transform:translateY(-50%);-webkit-transform:translateY(-50%);background: url(../../../images/unifyLottery/itemNone.png) no-repeat; width: 50px;height: 50px;background-size: 50px 50px;}
+.itemBtn.disabled{background-color: #999;}
+.signTotal{position: absolute;text-align: center;width: 100%;color: #fff;font-size: 20px;top: 6%;font-weight: bold;}
+.signTotal>span{color: #ff5a11;font-size: 32px;padding: 0 5px;}
+.pointAdd{font-size: 18px;position: absolute;width: 25%;left: 45%;top: 14.2%;color: #fff;height: 6%;}
+.signRecords{position: absolute;top: 31.5%;width: 90%;left: 5%;height: 44%;}
+.recordList{overflow: hidden;}
+.recordList+.recordList{border-top: 1px solid #ddd;}
+.recordList>li{position: relative;float: left;width: 14.28%;height: 10%;padding-left: 2px;background: url(../../../images/unifyLottery/unsign.png) no-repeat center center; background-size: 60% auto;}
+.recordList>li.signed{background-image: url(../../../images/unifyLottery/signed.png);}
+.recordList>li.signed:after{content:'';position: absolute;bottom: 2px;right: 2px;width: 50%;background: url(../../../images/unifyLottery/signedM.png) no-repeat right bottom; height: 100%;background-size: 100% auto;}
+.recordList>li+li{border-left: 1px solid #ddd;}
+
+#areaSelect{position: absolute;right: 0;top: 10px;width: 100px;}
+.selector{position:relative;}
+.selector+.selector>input{border-left:0;}
+.selector>input{border:1px solid #ddd;display:block;width:100%;height:40px;padding:4px 12px;font-size:14px;line-height:40px;color:#555;background-color:#fff;}
+.selector>select{position: absolute;width: 100%;height: 100%;z-index: 2;opacity: 0;left: 0;top: 0;}
+.areaSelectorC{margin: 10px 0;}
+.areaSelector{position: relative;}
+.areaSelector:after{content: '';border-width: 5px;border-style: solid;border-color: #999 transparent transparent;position: absolute;right:10px;top: 18px;}
+
+.businessHallsC{margin: 0 15px 20px;border-radius: 5px;-webkit-border-radius: 5px;text-align: center;overflow: hidden;}
+.tableWrap{border-radius: 5px;-webkit-border-radius: 5px;overflow: hidden;}
+.tableBody{max-height: 240px;overflow-y: auto;}
+.tableHead{background-color: #ff5a11;color: #fff;}
+.tableTr:after{clear: both;content: '';display: block;}
+.tableTh,.tableTd{float: left;padding: 8px 5px;}
+.businessHallsC .tableTh,.businessHallsC .tableTd{width: 40%;}
+.businessHallsC .tableTh+.tableTh,.businessHallsC .tableTd+.tableTd{width: 60%;}
+.tableTr.odd{background-color: #fff7e4;}
+.tableTr.even{background-color: #ffeec8;}
+
+.popup{position: fixed;left: 0;top: 0;width: 100%;height: 100%;background-color: rgba(0,0,0,.5);z-index:9999;display: none;}
+.popupContent{width: 80%;left: 10%;position: absolute;top: 50%;transform:translateY(-50%);-webkit-transform:translateY(-50%);}
+.popupCloseBtn{position: absolute;right: 10px;top: 5px;width: 20px;height: 20px;line-height: 20px;text-align: center;font-size:20px;background-color: #fff;color: #555;border-radius:15px;-webkit-border-radius:15px;}
+.popSelector{position:absolute;bottom:0;left:0;width:100%;padding:15px 10px;background-color:#fff;max-height:190px;overflow:auto;}
+.popSelector>li{height:32px;line-height:32px;text-align:center;font-size:14px;border-style:solid;border-width:1px 0;border-color:#fff;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.popSelector>li.cur{border-color:#ff5a11;}
+.popupOpe{position:absolute;bottom:190px;left:0;width:100%;height:32px;background-color:#fff;line-height:32px;}
+.popupOpe>a{padding:0 10px;}
+.popupBodyTitle{position:absolute;top:0;left:0;width:100%;text-align:center;padding:0 15px;background-color:#fff;z-index:9;}
+.popupBodyTitle>h6{border-bottom:1px solid #e8512e;height:40px;line-height:40px;font-size:14px;color:#e8512e;}
+.popupBodyTitle>h6>span{border-radius:15px;display:inline-block;width:20px;height:20px;line-height:18px;border:2px solid #ff5a11;vertical-align:middle;font-size:16px;font-weight:bold;margin-right:5px;margin-top:-1px;}
+.popupBodyText{margin-top:35px;overflow-y:auto;position:relative;max-height:320px;}
+ul.decimal{padding-left:20px;}
+ul.decimal>li{list-style-type:decimal;}
+ul.decimal>li+li{margin-top:5px;}
+
+.sideShake{position: fixed;top: 50%;transform:translateY(-50%);width: 24px;padding: 5px;line-height: 16px;border:1px solid #ff5a11;border-right:0;background-color: #fff;color: #ff5a11;text-align: center;right: 0;border-top-left-radius: 5px;border-bottom-left-radius: 5px;}
+.sideShake:before{content: '';position: absolute;bottom: -28px;left: -16px;width: 32px;height: 60px;background: url(../../../images/unifyLottery/orderQuery.png) no-repeat center bottom;animation:shake infinite linear 2s;-webkit-animation:shake infinite linear 2s;-moz-animation:shake infinite linear 2s;-ms-animation:shake infinite linear 2s;}
+@keyframes shake{
+    0%{transform:rotate(0);}
+    25%{transform:rotate(30deg);}
+    50%{transform:rotate(0);}
+    75%{transform:rotate(-30deg);}
+    100%{transform:rotate(0);}
+}
+@-webkit-keyframes shake{
+    0%{transform:rotate(0);}
+    25%{transform:rotate(30deg);}
+    50%{transform:rotate(0);}
+    75%{transform:rotate(-30deg);}
+    100%{transform:rotate(0);}
+}
+@-moz-keyframes shake{
+    0%{transform:rotate(0);}
+    25%{transform:rotate(30deg);}
+    50%{transform:rotate(0);}
+    75%{transform:rotate(-30deg);}
+    100%{transform:rotate(0);}
+}
+@-ms-keyframes shake{
+    0%{transform:rotate(0);}
+    25%{transform:rotate(30deg);}
+    50%{transform:rotate(0);}
+    75%{transform:rotate(-30deg);}
+    100%{transform:rotate(0);}
+}
+/*layer*/
+.layermbox0 .layermchild{min-width:240px !important;}
+.layermbtn span{font-size:14px !important;}
+.layermbtn span[type="1"]{color:#e8512e !important;}

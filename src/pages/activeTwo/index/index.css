@@ -29,3 +29,6 @@ div,p,input{
 	text-align: center;
 	line-height: 40px;
 }
+img{
+	width: 100%;
+}

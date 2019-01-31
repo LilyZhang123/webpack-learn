@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "test": "webpack --config webpack.test.js",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.dev.js --open --port 3000 --devtool eval --progress --colors --hot  ",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.dev.js --open --port 3000 --devtool eval --progress --colors --hot --host 192.168.31.6  ",
     "build": "cross-env NODE_ENV=production webpack --config webpack.prod.js"
   },
   "author": "",

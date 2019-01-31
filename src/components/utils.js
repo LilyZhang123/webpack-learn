@@ -26,7 +26,6 @@ axios.interceptors.response.use(data => { // 响应成功关闭loading
 });
 
 const fetch = (url, options) => {
-	console.log("options1", options);
 	const {
 		method = 'get', data
 	} = options

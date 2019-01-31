@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+<title>抽奖送大礼</title>
+</head>
+<style>
+.btn_myReward{display:block;text-align:center;color:#ff5a11;line-height:24px;font-size:16px;margin-top:10px;}
+.btn_myReward>span{border-radius:15px;display:inline-block;width:24px;height:24px;border:1px solid #ff5a11;vertical-align:middle;font-size:20px;margin-right:5px;}
+.sideShake{position: fixed;top: 25%;}
+</style>
+<body >
+<div id="rrapp" style="display: none">
+    <form id="subform" name="subform" style="display:none;">
+		<input type="hidden" autocomplete="off" name="lotteryMainId">
+		<input type="hidden" autocomplete="off" name="resultId" value="">
+	</form>
+	<input type="hidden" autocomplete="off" name="awardInstanceList">
+	<input type="hidden" id="prizesList">
+	<input type="hidden" id="restCount" >
+	<input type="hidden" id="color1">
+	<input type="hidden" id="color2">
+	<input type="hidden" id="extraPage" value="">
+	<div class="wrap">
+	  <div class="lotteryBg" style="position:relative;">
+	    <div class="bg"><img id="bigLotteryImg" width="100%" alt=""></div>
+	  </div>
+	  <div class="lottery" style="overflow-x: hidden;">
+	    <div class="wheel">
+	      <canvas class="item" id="wheelCanvas" width="422px" height="422px"></canvas>
+			<div id="restCountNum" style="display: none;">
+				<img id="start" class="pointer" src="../../../images/unifyLottery/wheelPointer.png" />
+				<img id="none" class="pointer" src="../../../images/unifyLottery/wheelPointer_ing.png" />
+			</div>
+			<div id="restCountNone" style="display: none;">
+	      		<img id="restNone" class="pointer" src="../../../images/unifyLottery/wheelPointer.png" />
+			</div>
+
+	    </div>
+        <div id="logined">
+          <h6 style="text-align:center;">您当前绑定的手机号码为：</h6>
+          <p id="curNumber" class="curNumber">
+			  {{secureSvcNum}}<span style="font-size:15px;">(剩余:{{restCount}}次)</span>
+		  </p>
+        </div>
+	    <div id="showExtraPage" align="center" style="display:none;">
+	    	<a id="showPageButton" class="curNumber" href="javascript:void(0)"><span style="font-size:15px;">规则详情</span></a>
+	    </div>
+	  </div>
+	  <div id="reward" class="popup">
+	    <div class="popupContent">
+	      <img src="../../../images/unifyLottery/reward.png" width="100%" alt="">
+	      <div class="rewardTextC">
+	        <div class="rewardText">
+	          <p>200M</p>
+	          <p>省内流量包</p>
+	        </div>
+	      </div>
+	      <a href="javascript:void(0)" id="submitBtn" class="btn_virtual" style="width:72%;left:14%;top:78%;height:12%;">兑换奖品</a>
+	    </div>
+	  </div>
+      <div id="rewardNone" class="popup">
+	    <div class="popupContent">
+	      <img src="../../../images/unifyLottery/rewardNone.png" width="100%" alt="">
+	      <a href="javascript:void(0)" class="popupCloseBtn">×</a>
+	      <div class="rewardTextC">
+	        <div class="rewardText">
+	          <p>您没有中奖...</p>
+	        </div>
+	      </div>
+	      <a href="javascript:void(0)" id="backBtn" class="btn_virtual" style="width:72%;left:14%;top:78%;height:12%;">返回转盘</a>
+	    </div>
+	  </div>
+	</div>
+	<a href="javascript:void(0)" class="sideShake"  style="font-weight:bold;" id="myAwardInfo">我的中奖信息</a>
+</div>
+</body>
+</html>

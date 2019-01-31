@@ -157,6 +157,10 @@ var webpackconfig = {
 				NODE_ENV: JSON.stringify('development')
 			}
 		}),
+		new webpack.ProvidePlugin({
+		  $: 'jquery',
+		  jQuery: 'jquery'
+		}),
 		// new VueLoaderPlugin(),
 		new CleanWebpackPlugin('dist'),
 		new MiniCssExtractPlugin({

@@ -82,12 +82,23 @@ var webpackconfig = {
 						interlaced: false,
 					},
 					// the webp option will enable WEBP
-					webp: {
-						quality: 75
-					}
+					// webp: {
+					// 	quality: 75
+					// }
 				}
 			}, ]
-		}, {
+		},{
+			test: /\.(mp3)(\?.*)?$/,
+			use: [{
+				loader: 'url-loader',
+				options: {
+					name: '[path][name].[ext]',
+					// 图片服务地址
+					publicPath: "http://test.com/"
+				}
+			}]
+		}, 
+		 {
 			test: /\.vue$/,
 			loader: 'vue-loader'
 		}, {
